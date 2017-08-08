@@ -1,0 +1,74 @@
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>持仓</title>
+	<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+	<link href="../css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/app.css" />
+	<style type="text/css">
+		
+		.mui-content>.mui-table-view:first-child {margin-top: 4px;}
+		.mui-table-view.liebaio .mui-table-view-cell{display: flex;text-align: center;}
+		.mui-table-view.liebaio .mui-table-view-cell span{flex:1}
+		.mui-table-view.liebaio.biaoti:after{background-color: #f36126;left:10px;right:10px;}
+		#shuju_biao .mui-table-view.liebaio .mui-table-view-cell{color:#666666}
+		#shuju_biao .mui-table-view.liebaio:before,#shuju_biao .mui-table-view.liebaio:after,.mui-table-view.liebaio.biaoti li.mui-table-view-cell:after{height: 0;}
+		.mui-table-view.liebaio .mui-table-view-cell span.kuandu{flex:1.5}
+		.mui-table-view.liebaio .mui-table-view-cell span.kuandu.dianwei{color: #f36126;}
+		.mui-table-view.liebaio .mui-table-view-cell span.kuandu.yingkui{color: #4dc937;}
+		
+	</style>
+	<body>
+		<!--标题-->
+		<header class="mui-bar mui-bar-nav" style="background: #fff;">
+			<h1 class="mui-title">持仓</h1>
+		</header>
+		<!--列表数据-->
+		<div class="mui-content">
+			<!--列表标题-->
+		    <ul class="mui-table-view liebaio biaoti">
+	            <li class="mui-table-view-cell">
+	                <span>日期</span>
+	                <span>商品</span>
+	                <span>类型</span>
+	                <span class="kuandu">点位</span>
+	                <span class="kuandu">盈亏</span>
+	                <span>操作</span>
+	            </li>
+	        </ul>
+	        <!--类表内容-->
+	        <div id="shuju_biao">
+	            <ul class="mui-table-view liebaio" onclick="openNewPage('xiangqing.html')">
+		            <li class="mui-table-view-cell">
+		                <span>06-66</span>
+		                <span>ty345</span>
+		                <span>fe454</span>
+		                <span class="dianwei kuandu">↑666</span>
+		                <span class="yingkui kuandu">↓999</span>
+		                <span>+66</span>
+		            </li>
+		        </ul>
+		        <ul class="mui-table-view liebaio" onclick="openNewPage('xiangqing.html')">
+		            <li class="mui-table-view-cell">
+		                <span>06-66</span>
+		                <span>ty345</span>
+		                <span>fe454</span>
+		                <span class="dianwei kuandu">↑666</span>
+		                <span class="yingkui kuandu">↓999</span>
+		                <span>+66</span>
+		            </li>
+		        </ul>
+	        </div>
+		</div>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/open.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/shuaxin.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//mui初始化
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+		</script>
+	</body>
+</head>

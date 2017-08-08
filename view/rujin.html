@@ -1,0 +1,81 @@
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>入金</title>
+	<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+	<link href="../css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/app.css" />
+	<style type="text/css">
+		
+		.mui-content>.mui-table-view:first-child {margin-top: 4px;}
+		.mui-table-view.liebaio .mui-table-view-cell{display: flex;text-align: center;}
+		.mui-table-view.liebaio .mui-table-view-cell p{flex:1}
+		.mui-table-view.liebaio .mui-table-view-cell p span{display: block;}
+		.mui-table-view.liebaio .mui-table-view-cell p span i.yue{color:#e62a2b;}
+		.mui-table-view.liebaio .mui-table-view-cell p.shuoming{flex:2}
+		.mui-table-view.liebaio .mui-table-view-cell p.jiner{color:#f8852a;}
+		.mui-table-view.liebaio.biaoti:after{background-color: #f36126;left:10px;right:10px;}
+		#shuju_biao .mui-table-view.liebaio .mui-table-view-cell{color:#666666}
+		#shuju_biao .mui-table-view.liebaio:before,#shuju_biao .mui-table-view.liebaio:after,.mui-table-view.liebaio.biaoti li.mui-table-view-cell:after{height: 0;}
+		#shuju_biao .mui-table-view:after{height: 1px!important;right:15px;left:15px;}
+		
+	</style>
+	<body>
+		<!--标题-->
+		<header class="mui-bar mui-bar-nav" style="background: #fff;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">入金</h1>
+		</header>
+		<!--列表数据-->
+		<div class="mui-content">
+			<!--列表标题-->
+		    <ul class="mui-table-view liebaio biaoti">
+	            <li class="mui-table-view-cell">
+	                <p>时间</p>
+	                <p class="shuoming">说明</p>
+	                <p>金额</p>
+	            </li>
+	        </ul>
+	        <!--类表内容-->
+	        <div id="shuju_biao">
+	            <ul class="mui-table-view liebaio">
+		            <li class="mui-table-view-cell">
+		                <p>
+		                	<span>06-66</span>
+		                	<span>06-66</span>
+		                </p>
+		                <p class="shuoming">
+		                	<span>合同号：<i>JIRE465768</i></span>
+		                	<span>产品：入金</span>
+		                	<span>余额：<i class="yue">6:00</i></span>
+		                </p>
+		                <p class="jiner">1：00</p>
+		            </li>
+		        </ul>
+		        <ul class="mui-table-view liebaio">
+		            <li class="mui-table-view-cell">
+		                <p>
+		                	<span>06-66</span>
+		                	<span>06-66</span>
+		                </p>
+		                <p class="shuoming">
+		                	<span>合同号：<i>JIRE465768</i></span>
+		                	<span>产品：入金</span>
+		                	<span>余额：<i class="yue">6:00</i></span>
+		                </p>
+		                <p class="jiner">1：00</p>
+		            </li>
+		        </ul>
+	        </div>
+		</div>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/open.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//mui初始化
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			}); 
+		</script>
+	</body>
+</head>

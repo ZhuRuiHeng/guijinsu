@@ -1,0 +1,50 @@
+html{
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+    font-size: 12px;
+}
+body{
+    background: #eee;
+    font-family: Microsoft YaHei;
+}
+body,div,h1,h2,h3,h4,h5,h6,span,a,ul,ol,li,p,span,em,i,b,img,button,input,header,section,dl,dd,footer,video,source{
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+ul,li,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    -webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+a:link,a:visited ,a:hover {
+    text-decoration: none;
+}
+em,i,span,b,label{
+	font-style: normal;
+	display: inline-block;
+    font-weight: normal;
+}
+input,button,textarea {
+     border:0;
+     margin:0;
+     padding:0;
+     font-size:1em;
+     line-height:1em;
+     background-color:rgba(0, 0, 0, 0);
+     font-family: "Microsoft YaHei", Helvetica, STHeiTi, Arial, sans-serif;
+     resize: none;
+     outline: none;
+}
+input[type="radio"]{
+    visibility: hidden;
+}
+button{
+  -webkit-appearance:none;
+}
+
+

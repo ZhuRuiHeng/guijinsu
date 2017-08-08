@@ -1,0 +1,27 @@
+body{
+	font-size: 14px;
+}
+.mui-bar-tab .mui-tab-item.mui-active{
+	color:#f36126; 
+}
+.mui-segmented-control{border-color:#f36126;border-radius: 22px;;}
+.mui-segmented-control .mui-control-item.mui-active{
+	color:#fff; 
+	background:#f36126;
+	border-color:#f36126;
+}
+.mui-segmented-control .mui-control-item{
+	border-color:#f36126;
+	color:#f36126;;
+}
+.mui-segmented-control .mui-control-item.mui-active{
+	background: -webkit-linear-gradient(#f15a47, #f88029); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#f15a47, #f88029); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#f15a47, #f88029); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#f15a47, #f88029); /* 标准的语法 */
+}
+em,i,span,b,label{
+	font-style: normal;
+	display: inline-block;
+    font-weight: normal;
+}

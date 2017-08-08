@@ -1,0 +1,90 @@
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>编辑头像</title>
+	<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+	<link href="../css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+	<link rel="stylesheet" href="../css/app.css" />
+	<style type="text/css">
+		.mui-grid-view.mui-grid-9.touxstyle{text-align: center;background: #fff;margin-top: 4px;padding: 20px 0;}
+		.mui-icon.touxiang{width:100px;height: 100px;}
+		.mui-icon.touxiang img{border-radius: 50%;width: 100%;height:100%;}
+		.mui-grid-view.mui-grid-9 .mui-table-view-cell{border:none;}
+		.touxstyle .mui-media-body .xingbie{ display:inline-block;width:15px;height:13px;background:url(../images/nan.png) no-repeat;background-size: contain;position: absolute;top: 0;right: 0;}
+		button{font-size:18px;font-weight:normal;text-decoration:none;display:block;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#FFF;background-color:#FFCC33;
+		border:1px solid #ECB100;padding:.5em 0em;margin:.5em .7em;-webkit-border-radius:5px;border-radius:5px;width: 100%;margin: 0 auto;}
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">编辑头像</h1>
+		</header>
+		<div class="mui-content">      
+		    <!--用户头像-->
+		    <ul class="mui-table-view mui-grid-view mui-grid-9 touxstyle" >
+	    		<li class="mui-table-view-cell mui-media ">
+	           		<a href="javascript:;" >
+		           		<!--头像-->
+		                <span class="mui-icon touxiang">
+		                	<img src="../images/dinghuo@3x.png"/>
+		                </span>
+		            </a>
+		        </li>
+		    </ul>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell">
+				<button style=" border-color:#f98329;background:-webkit-linear-gradient(left,#f36126,#f88029);background:-o-linear-gradient(right,#f36126,#f88029);background:-moz-linear-gradient(right,#f36126,#f88029);background:linear-gradient(to right,#f36126,#f88029);" class="button" onclick="getImage()">拍照</button>
+			</li>
+			<li class="mui-table-view-cell">
+				<button style=" border-color:#4bb2f4;background:-webkit-linear-gradient(left,#4bb2f4,#2fbcda);background:-o-linear-gradient(right,#4bb2f4,#f88029);background:-moz-linear-gradient(right,#4bb2f4,#2fbcda);background:linear-gradient(to right,#4bb2f4,#2fbcda);" class="button" onclick="galleryImg()">从相册选择</button>
+			</li>
+		</ul>
+		
+		</div>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/open.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/immersed.js" ></script>
+		<script type="text/javascript">
+			//mui初始化
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			}); 
+			
+			
+			
+			function plusReady(){
+				// 用户侧滑返回时关闭显示的图片
+				plus.webview.currentWebview().addEventListener( "popGesture", function(e){
+					if(e.type=="start"){
+						closeImg();
+					}
+				}, false );
+			}
+			document.addEventListener('plusready',plusReady,false);
+			//拍照
+			function getImage(){
+				var cmr = plus.camera.getCamera();
+				cmr.captureImage( function ( path ) {
+					plus.gallery.save( path );
+					outSet( "照片已成功保存到系统相册" );
+				}, function ( e ) {
+					outSet( "取消拍照" );
+				}, {filename:"_doc/gallery/",index:1} );
+			};
+			//相册
+			function galleryImg() {
+				// 从相册中选择图片
+				//outSet("从相册中选择图片:");
+			    plus.gallery.pick( function(path){
+			    	outLine(path);
+			        //showImg( path );
+			        //createItem(path);
+			    }, function ( e ) {
+			    	outSet( "取消选择图片" );
+			    }, {filter:"image"} );
+			}
+		</script>
+	</body>
+</head>

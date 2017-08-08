@@ -1,0 +1,102 @@
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>我的</title>
+	<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+	<link href="../css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+	<link rel="stylesheet" href="../css/app.css" />
+	<style type="text/css">
+		.mui-grid-view.mui-grid-9.touxstyle{text-align: center;background: #fff;margin-top: 4px;padding: 20px 0;}
+		.mui-icon.touxiang{width:5rem;height: 5rem;}
+		.mui-icon.touxiang img{border-radius: 50%;width: 100%;height:100%;}
+		.mui-grid-view.mui-grid-9 .mui-table-view-cell{border:none;}
+		.touxstyle .mui-media-body .xingbie{ display:inline-block;width:15px;height:13px;background:url(../images/nan.png) no-repeat;background-size: contain;position: absolute;top: 0;right: 0;}
+		.touxstyle .mui-media-body .xingbie.active{}
+		.touxstyle .mui-media-body .nicheng{display:block;max-width:89px;width:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;margin-right: 15px;}
+		.touxstyle.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{position: relative;}
+		#bianji{position:relative;}
+		.zhuanghu{display: flex; justify-content: space-between;padding: 0 15px; }
+		.zhuanghu p{margin: 0;}
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">我的</h1>
+		</header>
+		<div class="mui-content">      
+		    <!--用户头像-->
+		    <ul class="mui-table-view mui-grid-view mui-grid-9 touxstyle" >
+		    		<!--编辑-->
+	           		<div id="bianji">
+	           			<p class="bianji_in" style="width: 42px;display: inline-block;position:absolute;right:20px;" onclick="openNewPage('setting.html')">
+	           				<span><img width="26px" src="../images/bianji@3x.png"/></span>
+	           				<span>编辑</span>
+	           			</p>
+	           		</div>
+		           	<li class="mui-table-view-cell mui-media ">
+		           		<a href="javascript:;" >
+			           		<!--头像-->
+			                <span class="mui-icon touxiang">
+			                	<img src="../images/dinghuo@3x.png"/>
+			                </span>
+			                <!--昵称女生为xingbie.active男生为xingbie-->
+			                <div class="mui-media-body">
+			                	<span class="nicheng">远航</span>
+			                	<span class="xingbie"></span>
+			                </div>
+			           	</a>
+			        </li>
+			        <!--账户-->
+			        <div class="zhuanghu">
+			        	<p onclick="openNewPage('shouzi_mingxi.html')">账户余额：<span style="color:red;">1443</span></p>
+			        	<p>浮动盈亏：<span style="color:red;">6</span></p>
+			        </div>
+			        
+		        </ul>
+		        <!--9宫格-->
+		        <ul class="mui-table-view mui-grid-view mui-grid-9 touxstyle" >
+		            <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" style="border-bottom: 1px solid #ddd;border-right: 1px solid #ddd;">
+		            	<a href="javascript:;" style="color:#f8872b;" onclick="openNewPage('rujin.html')">
+		            	<!--<a href="rujin.html" style="color:#f8872b;">-->
+		                    <span class="mui-icon iconfont icon-zhanghurujin"></span>
+		                    <div class="mui-media-body">入金</div>
+		            	</a>
+		            </li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" style="border-bottom: 1px solid #ddd;">
+		            	<a href="javascript:;" style="color:#f8872b;" onclick="openNewPage('chujin.html')">
+		            	<!--<a href="chujin.html" style="color:#0bb226;">-->
+		                    <span class="mui-icon iconfont icon-zhanghuchujin"></span>
+		                    <div class="mui-media-body">出金</div>
+		            	</a>
+		           	</li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" style="border-right: 1px solid #ddd;"">
+		            	<a href="javascript:;" style="color:#f8872b;" onclick="openNewPage('jiaoyi_lishi.html')">
+		            	<!--<a href="jiaoyi_lishi.html" style="color:#1e8be6;">-->
+		                    <span class="mui-icon iconfont icon-lishijiaoyijilu01"></span>
+		                    <div class="mui-media-body">交易历史</div>
+		            	</a>
+		           	</li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+		            	<a href="javascript:;" style="color:#f8872b;" onclick="openNewPage('shouzi_mingxi.html')">
+		            	<!--<a href="shouzi_mingxi.html" style="color:#e62021;">--> 
+		                    <span class="mui-icon iconfont icon-shouzhimingxi"></span>
+		                    <div class="mui-media-body">收支明细</div>
+		            	</a>
+		            </li>
+		        </ul>
+		</div>
+		
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/open.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/shuaxin.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			//mui初始化
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			
+		</script>
+	</body>
+</head>

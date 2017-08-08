@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>绑定银行卡</title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<style>
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			
+			.mui-input-group label {
+				width: 22%;
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 78%;
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			.mui-switch.mui-active {
+			    border-color: #f36126;
+			    background-color: #f36126;
+			}
+			.mui-btn {
+				padding: 10px;
+				border-color:#f98329;
+				background: -webkit-linear-gradient(left, #f36126 , #f88029); /* Safari 5.1 - 6.0 */
+				background: -o-linear-gradient(right, #f36126, #f88029); /* Opera 11.1 - 12.0 */
+				background: -moz-linear-gradient(right, #f36126, #f88029); /* Firefox 3.6 - 15 */
+				background: linear-gradient(to right, #f36126 , #f88029); /* 标准的语法 */
+			}
+			
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+				display: flex;
+    			justify-content: space-between;
+			}
+			
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+			
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+			
+			.oauth-area .oauth-btn.disabled {
+				background-color: #ddd;
+			}
+			.mui-input-group label{
+				vertical-align: middle;
+    			text-align: center;
+			}
+			.mui-input-group label img{
+				width: 15px;
+			    vertical-align: middle;
+			    text-align: center;
+			}
+		
+			select{
+				-webkit-box-sizing: border-box;
+			    box-sizing: border-box;
+			    text-align: center;
+			    border: 0;
+			    border-radius: 6px;
+			    height: 30px;
+			    padding: 0 10px!important;
+			    background:url(../images/xiangxia@3x.png) no-repeat right;
+			    background-size: 40px;
+			}
+			.mui-content .mui-input-group{
+				margin: 20px 10px 0 10px;background: #efeff4;
+			}
+			.mui-content .mui-input-group .mui-input-row{    
+				border-radius: 12px;background-color: #e2e2e2;margin: 0 0 5px 0;
+			}
+			.mui-input-group:before,.mui-input-group:after{background: #fff;}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background: #fff;">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left "></a>
+		    <h1 class="mui-title">绑定银行卡</h1>
+		</header>
+		<div class="mui-content" style="background: #fff;">
+			<form id='yinhang-form' class="mui-input-group" style="background: #fff;">
+				<div class="mui-input-row">
+					<label class="iconfont iconfont icon-denglu-nicheng""></label>
+					<input id='xingming' type="text" class="mui-input-clear mui-input" placeholder="银行卡持卡人姓名">
+				</div>
+				<div class="mui-input-row">
+					<label class=" iconfont icon-yinxingqia"></label>
+					<input id='kaohao' type="text" class="mui-input-clear mui-input" placeholder="银行卡卡号">
+				</div>
+				<div class="mui-input-row">
+					<label class="iconfont icon-farenshenfenzheng"></label>
+					<input id='kaohao' type="text" class="mui-input-clear mui-input" placeholder="持卡人身份证号码">
+				</div>
+				<div class="mui-input-row">
+					<label>银行</label>
+					<select name="">
+						<option value="">请选择发卡行</option>
+						<option value="1">工商银行</option>
+						<option value="2">建设银行</option>
+						<option value="3">交通银行</option>
+						<option value="4">招商银行</option>
+						<option value="5">中国银行</option>
+						<option value="6">农业银行</option>
+						<option value="7">中信银行</option>
+						<option value="8">广发银行</option>
+						<option value="9">平安银行</option>
+					</select>
+				</div>
+			</form>
+			<!--提示-->
+			<div class="mui-input-row" style="color:#f98329;background: #fff;padding: 0 10px;margin-top: 5px;;">
+				为了您的资金安全，此账号为您唯一的入金或出金账号，请务必仔细核对以上信息。
+			</div>
+			<div class="mui-content-padded">
+				<button id="" class="mui-btn mui-btn-block mui-btn-primary" >确认</button>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/mui.enterfocus.js"></script>
+		<script src="../js/open.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/app.js"></script>
+		<script>
+		</script>
+	</body>
+
+</html>
